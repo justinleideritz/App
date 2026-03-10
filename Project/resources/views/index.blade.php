@@ -1,57 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Homepage</title>
 
-        @vite(['resources/css/app.css', 'resources/css/app.css'])
-        <link rel="stylesheet" href="{{ asset('css/default.css') }}">
-    </head>
-    <body>
+    <x-head>
+        <x-slot:sTitle>Home</x-slot:sTitle>
+    </x-head>
 
-        <nav class="navbar">
-            <div class="container">
-                <h2 class="logo">MySite</h2>
-                <ul class="nav-links">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <body class="bg-gray-950 text-gray-100">
 
-        <header class="hero">
-            <div class="container">
-                <h1>Welcome to My Website</h1>
-                <p>This is a simple Laravel homepage layout with a navbar, header, content, and footer.</p>
+        <x-nav></x-nav>
+
+        <header class="bg-gray-800 py-24">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h1 class="text-4xl font-bold mb-4">Energy Shoppa</h1>
+                <p class="text-gray-600">Drink je problemen weg met caffeïne</p>
             </div>
         </header>
 
-        <main class="content container">
-            <h2>About This Page</h2>
-            <p>
-                This is some example text for your homepage. You can add sections here like features, services, blog posts, or anything else you want visitors to see.
-            </p>
-            <p>
-                Laravel Blade makes it easy to build reusable layouts and components.
+        <main class="max-w-4xl mx-auto px-4 py-16">
+            <h2 class="text-2xl font-semibold mb-4">About This Page</h2>
+            <p class="mb-4 text-gray-300">
+                Ik weet niet wtf ik aan het doen ben, judge me niet
             </p>
         </main>
 
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; {{ date('Y') }} MySite. All rights reserved.</p>
-            </div>
-        </footer>
+        <x-footer></x-footer>
 
     </body>
 </html>

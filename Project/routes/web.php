@@ -1,8 +1,15 @@
 <?php
 
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
-Route::get( '/', function () {
+Route::get( '/', [
+    IndexController::class,
+    'index',
+] )->name( 'index' );
 
-    return view( 'index' );
-} );
+Route::get( '/shop', [
+    ShopController::class,
+    'index',
+] )->name( 'shop' );
