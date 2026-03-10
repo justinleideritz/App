@@ -1,7 +1,6 @@
+@vite(['resources/css/app.css'])
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$sTitle ?? 'Bomba'}}</title>
-
-    @vite('resources/css/app.css')
+    <title>{{ $sTitle ?? 'Bomba' }}</title>
 </head>
