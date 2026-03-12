@@ -1,3 +1,4 @@
+@php @endphp
 @vite(['resources/css/login.css'])
     <!DOCTYPE html>
 
@@ -19,15 +20,25 @@
                 </div>
 
                 <div class="login-card">
-                    <form class="login-form" method="post" action="">
+                    <form class="login-form" method="POST" action="{{ route('login.form') }}">
                         @csrf
 
                         <div class="field">
-                            <label for="username">Username</label>
-                            <input id="username" type="text" name="username" placeholder="Enter your username">
+                            @if ($errors->any())
+                                @foreach($errors->get('email') as $sError)
+                                    <p>{{ $sError }}</p>
+                                @endforeach
+                            @endif
+                            <label for="email">Email</label>
+                            <input id="email" type="text" name="email" placeholder="Enter your email">
                         </div>
 
                         <div class="field">
+                            @if ($errors->any())
+                                @foreach($errors->get('password') as $sError)
+                                    <p>{{ $sError }}</p>
+                                @endforeach
+                            @endif
                             <label for="password">Password</label>
                             <input id="password" type="password" name="password" placeholder="Enter your password">
                         </div>

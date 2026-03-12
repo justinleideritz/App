@@ -20,6 +20,9 @@
             <li class='nav-item'>
                 <a class="{{ request()->routeIs('login') || request()->routeIs('user_login') ? 'is-active' : '' }}" href="{{ route('login') }}">Login</a>
             </li>
+            <li class='nav-item'>
+                <a class="{{ request()->routeIs('register') || request()->routeIs('register') ? 'is-active' : '' }}" href="{{ route('register') }}">Register</a>
+            </li>
         </ul>
     </div>
 </nav>
