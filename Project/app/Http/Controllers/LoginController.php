@@ -22,10 +22,7 @@ class LoginController extends Controller
     {
 
         $aCredentials = $oRequest->validate( [
-            'email'    => [
-                'required',
-                'email',
-            ],
+            'email' => [ 'required' ],
             'password' => [ 'required' ],
         ] );
 
@@ -33,7 +30,7 @@ class LoginController extends Controller
         {
             $oRequest->session()->regenerate();
 
-            return redirect()->intended( 'index' );
+            return redirect()->intended();
         }
 
         return back()->withErrors( [

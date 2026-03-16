@@ -12,14 +12,14 @@ class Product extends Model
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    protected $table = 'product';
+    protected $table = 'products';
 
     protected $fillable
                      = [
-            'PRO_Name',
-            'PRO_Description',
-            'PRO_Price',
-            'PRO_Quantity',
+            'name',
+            'description',
+            'price',
+            'quantity',
         ];
 
     public function getID ()

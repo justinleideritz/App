@@ -36,7 +36,7 @@
                 @forelse ($aProducts as $oProduct)
                     <article class="shop-card">
                         <div class="shop-card__image-wrap">
-                            <img class="shop-card__image" src="https://picsum.photos/seed/{{ $oProduct->getID() }}/600/420" alt="{{ $oProduct->getName() }}">
+                            <img class="shop-card__image" src="{{ asset('storage/images/mango_loco.webp') }}" alt="{{ $oProduct->getName() }}">
                         </div>
 
                         <div class="shop-card__body">
